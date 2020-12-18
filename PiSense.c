@@ -1,13 +1,17 @@
+/* RPiSensor Streaming Framework */
 
-class node {
+//--- note: should probably be called PiSense.cpp for using C++
+
+class node {  //-- should it not be 'Node' in usual C++ naming convention one has classes staring with a capital letter 
 public:
       node(int id){ //constructor
             nid = id;
       }
-      //get and set required? unlikely
+      //get and set required? unlikely   -- agreed
 
       typedef int NodeControlHandler (int nid, byte ctr, unsigned sz);   // handle an incoming control command, may need to forward on
 
+	//-- not sure what is planned for here?
       switch(ctr){
             //start sensing 
             case 1: 
